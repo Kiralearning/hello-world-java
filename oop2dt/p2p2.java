@@ -23,6 +23,7 @@ public class p2p2 {
         String imie = "Kira";
         boolean czyParzysta;
         czyParzysta = zm1 % 2 == 0;
+        // System.out.println("Parzysta: " + czyParzysta);
         // wynik=0;
         if (czyParzysta) {
             System.out.println("Tak");
@@ -35,6 +36,12 @@ public class p2p2 {
         System.out.println("Nazywam się " + osoba);
         int wartBezw;
         wartBezw = zm1 >= 0 ? zm1 : -zm1;
+        // if (zm1 >= 0) {
+        //     wartBezw = zm1;
+        // } else {
+        //     wartBezw = -zm1;
+        // }
+        System.out.println("wartBezw: " + wartBezw);
     }
 
 }
