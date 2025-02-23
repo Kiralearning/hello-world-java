@@ -20,7 +20,7 @@ public class p2p2 {
         float wynik = (float) zm1 / zm2;
         System.out.println("Wynik to " + wynik);
 
-        String imie = "Agata";
+        String imie = "Kira";
         boolean czyParzysta;
         czyParzysta = zm1 % 2 == 0;
         // wynik=0;
@@ -29,7 +29,7 @@ public class p2p2 {
         } else {
             System.out.println("Nie");
         }
-        String nazwisko = "Mendyk";
+        String nazwisko = "Learning";
         String osoba = imie + " " + nazwisko;
         System.out.println("Nazywam się " + osoba.toUpperCase());
         System.out.println("Nazywam się " + osoba);
