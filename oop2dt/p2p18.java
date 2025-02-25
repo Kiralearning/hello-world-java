@@ -9,21 +9,21 @@ public class p2p18 {
         private int l_nog;
         private float waga;
 
-        public zwierze() {
+        public zwierze() { // constructor nr1, no arguments - set default values
             nazwa = "";
             rodzaj = "";
             l_nog = 0;
             waga = 0;
         }
 
-        public zwierze(String n, String r, int l, float w) {
+        public zwierze(String n, String r, int l, float w) {  // constructor nr2 - set values according to method arguments
             nazwa = n;
             rodzaj = r;
             l_nog = l;
             waga = w;
         }
 
-        public void wczytaj() {
+        public void wczytaj() { //input values of zwierze
             System.out.print("Podaj nazwę: ");
             nazwa = getString();
             System.out.print("Podaj rodzaj: ");
@@ -39,14 +39,17 @@ public class p2p18 {
                     + rodzaj + "ma " + l_nog + " nog i waży " + waga + " kg.";
         }
 
-        public boolean equals(zwierze z) {
-            if (z == null || this.getClass() != z.getClass()) {
+        public boolean equals(zwierze z) { //compare zwierze
+            if (z == null || this.getClass() != z.getClass()) { //"this" current instance of class "zwierze"
+            //getClass() returns class name of the object, not all fields of the object
+            //this.getClass() != z.getClass()
+            //comparing class name of "this" with class name of "z"(z argument of method equals)
                 return false;
             }
-            if (z.nazwa == null || z.rodzaj == null) {
+            if (z.nazwa == null || z.rodzaj == null) { 
                 return false;
             }
-            if (nazwa.equals(z.nazwa) && rodzaj.equals(z.rodzaj) && l_nog == z.l_nog &&
+             if (nazwa.equals(z.nazwa) && rodzaj.equals(z.rodzaj) && l_nog == z.l_nog &&
                     waga == z.waga)
                 return true;
             else
@@ -55,10 +58,13 @@ public class p2p18 {
     }
 
     public static class zwierzyniec {
-        private zwierze[] z;
+        private zwierze[] z; //z - field(pole) of class "zwierzyniec"
+        //field "z" is array(шкаф, массив) of class "zwierze"
 
-        public zwierzyniec() {
-            for (int i = 0; i < 3; i++) {
+        public zwierzyniec() { //constructor nr1, no arguments - set default values
+            for (int i = 0; i < 3; i++) { // i = 0, 1, 2 
+                //cycle create a tree instances of class "zwierze"
+                //z[0] z[1] z[2]
                 z[i].nazwa = "";
                 z[i].rodzaj = "";
                 z[i].l_nog = 0;
@@ -97,18 +103,18 @@ public class p2p18 {
     }
 
     public static void main(String[] arg) {
-        // zwierze z1=new zwierze("Burek","pies",4,15);
-        // zwierze z2=new zwierze();
-        // zwierze z3=z1;
-        // z2.wczytaj();
-        // if (z1.equals(z2))
-        // {System.out.println("To są takie same egzemplarze");}
-        // else
-        // {System.out.println("To są inne egzemplarze");}
-        // if (z1==z3)
-        // {System.out.println("To są takie same egzemplarze");}
-        // else
-        // {System.out.println("To są inne egzemplarze");}
+        zwierze z1=new zwierze("Burek","pies",4,15);
+        zwierze z2=new zwierze();
+        zwierze z3=z1;
+        z2.wczytaj();  
+        if (z1.equals(z2))  // z1 == "this" and z2 == "z" argument
+        {System.out.println("To są takie same egzemplarze");}
+        else
+        {System.out.println("To są inne egzemplarze");}
+        if (z1==z3)
+        {System.out.println("To są takie same egzemplarze");}
+        else
+        {System.out.println("To są inne egzemplarze");}
 
     }
 }

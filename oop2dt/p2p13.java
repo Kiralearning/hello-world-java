@@ -3,13 +3,15 @@ package oop2dt;
 import java.util.Scanner;
 
 public class p2p13 {
-    public static class Samochod {
+    public static class Samochod { //class is like a blueprint
+        //variables/fields/attributes/data:
         private String marka;
         private String kolor;
         private int predkosc;
         private int liczba_kol = 4;
 
-        public void ustawKolor(String k) {
+        //methods/functions/behaviours:
+        public void ustawKolor(String k) { //ustawKolor - setColor
             kolor = k;
         }
 
@@ -25,6 +27,10 @@ public class p2p13 {
             liczba_kol = i;
         }
 
+        public String toString() {//specific method to allow printing
+            return "Samochod " + marka + " ma kolor " + kolor + " i jedzie z predkoscia " +
+                    predkosc + " na " + liczba_kol + " kolach";
+        }
         // public void wypisz()
         // {
         // System.out.print("Samochod "+marka+" ");
@@ -32,18 +38,15 @@ public class p2p13 {
         // System.out.println(predkosc);
         // }
 
-        public String toString() {
-            return "Samochod " + marka + " ma kolor " + kolor + " i jedzie z predkoscia " +
-                    predkosc + " na " + liczba_kol + " kolach";
-        }
+        
     }
 
     public static void main(String[] arg) {
-        Samochod s1 = new Samochod();
+        Samochod s1 = new Samochod(); //s1 is an instance of the class Samochod
         Samochod s2 = new Samochod();
         System.out.print("Podaj marke: ");
         String m = getString();
-        s1.ustawMarka(m);
+        s1.ustawMarka(m); //set field "marka" to value of "m"
         System.out.print("Podaj kolor: ");
         m = getString();
         s1.ustawKolor(m);
@@ -51,17 +54,22 @@ public class p2p13 {
         int k = getInt();
         s1.ustawPredkosc(k);
         System.out.println(s1);
+        // s1.wypisz();
         s2.ustawMarka("BMW");
         s2.ustawKolor("rozowy");
         s2.ustawPredkosc(90);
         s2.ustawKola(2);
         System.out.println(s2);
-        Samochod s3 = s1;
-        s3.ustawKolor("czarny");
+        // s2.wypisz();
+        Samochod s3 = s1; //changes to s3 will also update s1
+        s3.ustawKolor("red");
         System.out.println(s3);
+        // s3.wypisz();
         System.out.println(s1);
+        // s1.wypisz();
         Samochod s4 = new Samochod();
         System.out.println(s4);
+        // s4.wypisz();
     }
 
     public static String getString() {

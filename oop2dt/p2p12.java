@@ -16,7 +16,7 @@ public class p2p12 {
         for (int i = 0; i < a.length; i++) {
             System.out.print("podaj element nr " + i + ": ");
             b = getFloat();
-            a[i] = oblicz(b);
+            a[i] = oblicz(b);  // oblicz(getFloat());
         }
     }
 

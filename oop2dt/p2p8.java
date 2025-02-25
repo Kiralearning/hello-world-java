@@ -11,6 +11,7 @@ public class p2p8 {
         b = getInt();
         long wynik = oblicz(a, b);
         System.out.println("Wynik to " + wynik);
+        // System.out.println(arg[0]+ " " + arg[1]);
     }
 
     public static int getInt() {

@@ -18,10 +18,11 @@ public class p2p9 {
     }
 
     public static int oblicz(int[] a) {
+        // returns the count of positive numbers in the array
         int licz = 0;
         for (int i = 0; i < a.length; i++) {
             if (a[i] > 0) {
-                licz++;
+                licz++; // licz = licz + 1
             }
         }
         return licz;

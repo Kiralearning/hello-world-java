@@ -10,10 +10,9 @@ public class p2p10 {
         imie = getString();
         System.out.print("podaj nazwisko: ");
         nazwisko = getString();
-        imie = imie.replace("eshka", "ra");
+        imie = imie.replace("a", "ieshka");
         String nowy = imie.substring(0, 1).toUpperCase() + imie.substring(1).toLowerCase()
-                + " " + nazwisko.substring(0, 1).toUpperCase() +
-                nazwisko.substring(1).toLowerCase();
+                + " " + nazwisko.substring(0, 1).toUpperCase() + nazwisko.substring(1).toLowerCase();
         System.out.println("Witaj " + nowy);
         String sprawdz = "Kirieshka";
         if (imie.equalsIgnoreCase(sprawdz)) {
@@ -27,4 +26,5 @@ public class p2p10 {
     public static String getString() {
         return new Scanner(System.in).next();
     }
+
 }

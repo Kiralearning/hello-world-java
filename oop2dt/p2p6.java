@@ -19,7 +19,7 @@ public class p2p6 {
 			b = b + a.charAt(i);    // append char to "b"
 		}
 
-		if (a.equals(b)) {
+		if (a.equals(b)) {  // == is not working for Strings in Java
 			System.out.println("To palindron");
 		} else {
 			System.out.println("To nie palindron");

@@ -9,10 +9,10 @@ public class p2p15 {
         private int waga;
 
         public void setNazwa(String nazwa) {
-            this.nazwa = nazwa;
+            this.nazwa = nazwa; //"this" is a reference to the current object
         }
 
-        public void setCena(float cena) {
+        public void setCena(float cena) { //setCena modifies the value of "this.cena" to "cena"
             this.cena = cena;
         }
 
@@ -21,7 +21,7 @@ public class p2p15 {
         }
 
         public String getNazwa() {
-            return nazwa;
+            return nazwa; //return this.nazwa
         }
 
         public float getCena() {
